@@ -15,7 +15,7 @@
 
 ## ▶️ ویدیوی معرفی پروژه
 
-[![Watch on YouTube](https://img.youtube.com/vi/j-tf7VyxzjY/0.jpg)](https://www.youtube.com/watch?v=j-tf7VyxzjY)
+[![Watch on YouTube](https://s21.uupload.ir/files/matgama/github/ChatGPT%20Image%20Aug%207,%202025,%2011_27_12%20PM.png)](https://youtu.be/ll7KybZZFjw)
 
 ---
 
