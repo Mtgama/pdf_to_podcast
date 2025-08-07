@@ -11,15 +11,15 @@ import tempfile
 llm = ChatOpenAI(
     model="gpt-4o-mini",  
     base_url="https://api.avalai.ir/v1",
-    api_key="aa-vljXOzFhI2c4IdLtR6wUvQlcomoUSzbrPBFQoCACREXcor0A", 
+    api_key="YOUR_API_KEY", 
 )
 
 
 @st.cache_resource
 def load_tts_model():
 
-    config_path = "/home/mtgama/Desktop/smartglass/TTS/config1.json"
-    model_path = "/home/mtgama/Desktop/smartglass/TTS/best_model_30824.pth"
+    config_path = "config1.json"
+    model_path = "best_model_30824.pth"
     synthesizer = Synthesizer(model_path, config_path)
     return synthesizer
 
@@ -52,14 +52,14 @@ pdf_file = st.file_uploader("یک فایل PDF آپلود کن", type="pdf")
 if pdf_file:
     with st.spinner("در حال استخراج متن..."):
         raw_text = extract_text_from_pdf(pdf_file)
-        st.success("✅ متن استخراج شد!")
+        st.success("متن استخراج شد!")
 
     st.text_area("📄 متن استخراج‌شده:", raw_text, height=200)
 
     if st.button("تبدیل به گفت‌وگوی پادکستی"):
         with st.spinner("در حال تولید دیالوگ با GPT..."):
             dialogue = convert_to_podcast_dialogue(raw_text)
-            st.success("✅ دیالوگ تولید شد!")
+            st.success("دیالوگ تولید شد!")
             st.text_area("🗣 دیالوگ پادکستی:", dialogue, height=300)
 
             with st.spinner("در حال تبدیل به صدا..."):
